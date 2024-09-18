@@ -29,6 +29,9 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'image_url' => "https://yt3.googleusercontent.com/AwanU4ecUB383L-80GRcrPs9ic0E-b2aMnJy_0IO4M_fj_6YiQqnWMMt6N_fyE36PpCLZ0Kf7g=s900-c-k-c0x00ffffff-no-rj",
+            'height' => fake()->randomFloat(1, 160, 185),
+            'weight' => fake()->randomFloat(1, 60, 80),
         ];
     }
 
