@@ -22,6 +22,10 @@
                     <x-nav-link :href="route('log.create')" :active="request()->routeIs('log.create')">
                         {{ __('Training開始') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('log.create3')" :active="request()->routeIs('log.create3')">
+                        {{ __('Logs') }}
+                    </x-nav-link>
+                    
                 </div>
             </div>
 
