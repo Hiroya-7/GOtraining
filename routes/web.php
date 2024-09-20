@@ -33,6 +33,7 @@ Route::get('/parts/{part}', [PartController::class, 'show'])->name('part.show');
 
 Route::get('/log/create', [LogController::class, 'create'])->name('log.create');
 Route::get('/log/create2', [LogController::class, 'create2'])->name('log.create2');
+Route::get('/log/create3', [LogController::class, 'create3'])->name('log.create3');
 Route::post('/log/create', [LogController::class, 'store'])->name('log.store');
 
 Route::get('/dashboard', function () {
