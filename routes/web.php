@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LogController;
+use App\Http\Controllers\FolderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +34,9 @@ Route::get('/parts/{part}', [PartController::class, 'show'])->name('part.show');
 
 Route::get('/log/create', [LogController::class, 'create'])->name('log.create');
 Route::get('/log/create2', [LogController::class, 'create2'])->name('log.create2');
-Route::get('/log/create3', [LogController::class, 'create3'])->name('log.create3');
 Route::post('/log/create', [LogController::class, 'store'])->name('log.store');
+
+Route::get('/folder', [FolderController::class, 'index'])->name('folder.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -22,8 +22,8 @@
                     <x-nav-link :href="route('log.create')" :active="request()->routeIs('log.create')">
                         {{ __('Training開始') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('log.create3')" :active="request()->routeIs('log.create3')">
-                        {{ __('Logs') }}
+                    <x-nav-link :href="route('folder.index')" :active="request()->routeIs('folder.index')">
+                        {{ __('Training記録') }}
                     </x-nav-link>
                     
                 </div>
