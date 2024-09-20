@@ -67,10 +67,5 @@ class LogController extends Controller
         }
     return redirect('/parts');
     }
-    
-    public function create3(Log $log)
-    {
-        return view('logs.create3')->with(['log' => $log]);
-    }
 }
 ?>
