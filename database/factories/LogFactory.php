@@ -21,8 +21,8 @@ class LogFactory extends Factory
             'menu_id' => 1,
             'folder_id' => 1,
             'weight' =>fake()->randomFloat(1, 1, 200),
-            'reps' =>fake()->randomFloat(1, 1, 10),
-            'set' =>fake()->randomFloat(1, 1, 10),
+            'reps' =>fake()->numberBetween(1, 10),
+            'set' =>fake()->numberBetween(1, 10),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
         ];
