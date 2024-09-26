@@ -8,6 +8,10 @@
             @foreach($folders as $folder)
                 <div class="flex justify-center py-3 bg-base">
                 　　<div class="border-solid border-2 border-main2 w-1/4 bg-main">
+                        <div class="flex justify-center py-2">
+                            <img src="{{ $folder->logs->first()->menu->part->user->image_url }}" alt="ユーザー画像" class="w-12 h-12 rounded-full mr-2">
+                            <span>{{ $folder->logs->first()->menu->part->user->name }}</span>
+                        </div>
                 　　　　<div class="flex justify-center">日時：{{ $folder->updated_at }}</div>
                     　　　　@foreach($folder->logs as $log)
                         　　　　<div class="flex justify-center">

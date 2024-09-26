@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         $this->call(FolderSeeder::class);
         $this->call(LogSeeder::class);
         $this->call(CommentSeeder::class);
+        $this->call(FollowSeeder::class);
     }
 }

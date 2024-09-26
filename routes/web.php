@@ -6,6 +6,7 @@ use App\Http\Controllers\PartController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\LogController;
 use App\Http\Controllers\FolderController;
+use App\Http\Controllers\FollowController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,6 +38,8 @@ Route::get('/log/create2', [LogController::class, 'create2'])->name('log.create2
 Route::post('/log/create', [LogController::class, 'store'])->name('log.store');
 
 Route::get('/folder', [FolderController::class, 'index'])->name('folder.index');
+
+Route::get('/follow', [FollowController::class, 'index'])->name('follow.index');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -12,16 +12,18 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('part.index')" :active="request()->routeIs('part.index')">
+                    <x-nav-link :href="route('part.index')" :active="request()->routeIs('part.index')" class="cursor-pointer hover:bg-main">
                         {{ __('Training一覧') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('log.create')" :active="request()->routeIs('log.create')">
-                        {{ __('Training開始') }}
+                    <x-nav-link :href="route('log.create')" :active="request()->routeIs('log.create')" class="cursor-pointer hover:bg-main">
+                        {{ __('Start') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('folder.index')" :active="request()->routeIs('folder.index')">
+                    <x-nav-link :href="route('folder.index')" :active="request()->routeIs('folder.index')" class="cursor-pointer hover:bg-main">
                         {{ __('Training記録') }}
                     </x-nav-link>
-                    
+                    <x-nav-link :href="route('follow.index')" :active="request()->routeIs('follow.index')" class="cursor-pointer hover:bg-main">
+                        {{ __('Follower') }}
+                    </x-nav-link>
                 </div>
             </div>
 
