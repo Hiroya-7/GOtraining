@@ -15,13 +15,13 @@ class PartSeeder extends Seeder
     public function run(): void
     {
         DB::table('parts')->insert([
-                'user_id' => 1,
+                'user_id' => 11,
                 'name' => '胸',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
          ]);
          DB::table('parts')->insert([
-                'user_id' => 1,
+                'user_id' => 12,
                 'name' => '足',
                 'created_at' => new DateTime(),
                 'updated_at' => new DateTime(),
