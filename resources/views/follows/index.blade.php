@@ -5,6 +5,12 @@
                 <div class="flex justify-center bg-sub mx-auto text-4xl py-3">Training記録</div>
             </x-slot>
             
+            <!-- 検索フォーム -->
+            <form method="GET" action="{{ route('follow.index') }}" class="flex justify-center mb-5">
+                <input type="text" name="username" placeholder="ユーザーネームを入力" class="p-2 border rounded" value="{{ request('username') }}">
+                <button type="submit" class="ml-2 p-2 bg-blue-500 text-white rounded">検索</button>
+            </form>
+            
             @foreach($folders as $folder)
                 <div class="flex justify-center py-3 bg-base">
                 　　<div class="border-solid border-2 border-main2 w-1/4 bg-main">

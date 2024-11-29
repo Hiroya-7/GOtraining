@@ -57,3 +57,16 @@
         <script src="{{asset('/js/stoppwotch.js')}}"></script>
     </x-app-layout>
 </div>
+<script>
+    function validateForm() {
+        // チェックされているかを確認する
+        const checkboxes = document.querySelectorAll('input[name="menus[{{ $i }}][id]"]:checked');
+        // もしチェックボックスが1つもチェックされていなければ警告を表示
+        if (checkboxes.length === 0) {
+            window.alert('全てのトレーニングを終わらせてください。') // エラーメッセージを表示
+            return false; // フォーム送信を防ぐ
+        }
+        errorMessage.style.display = 'none'; // エラーメッセージを非表示
+        return true; // フォームを送信する
+    }
+</script>

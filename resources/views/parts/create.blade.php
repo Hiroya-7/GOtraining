@@ -22,3 +22,16 @@
         </div>
     </x-app-layout>
 </div>
+<script>
+    function validateForm() {
+        // チェックされているかを確認する
+        const submit = document.querySelectorAll('input[name="part[name]"]:checked');
+        // もしテキストボックスに何も書かれていなければ警告を表示
+        if (text.length === 0) {
+            window.alert('Menuを作成してください。') // エラーメッセージを表示
+            return false; // フォーム送信を防ぐ
+        }
+        errorMessage.style.display = 'none'; // エラーメッセージを非表示
+        return true; // フォームを送信する
+    }
+</script>

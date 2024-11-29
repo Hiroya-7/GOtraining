@@ -3,12 +3,11 @@
         <x-slot name="header">
             <div class="flex justify-center bg-sub mx-auto text-4xl py-3">Training</div>
         </x-slot>
-        
-        <form action="/log/create2" method="GET">
+        <form id="trainingForm" action="/log/create2" method="GET" onsubmit="return validateForm()">
             @csrf
-            @foreach($menus as $menu) 
+            @foreach($menus as $menu)
                 <div class="flex justify-center py-2 mx-auto">
-                    <div class="justify-center bg-main py-3 px-3 rounded-md w-1/4 hover:bg-main2 text-2xl"> 
+                    <div class="justify-center bg-main py-3 px-3 rounded-md w-1/4 hover:bg-main2 text-2xl">
                         <div class="flex justify-center items-center">
                             <div class="px-2">
                                 <input class="cursor-pointer" type="checkbox" name="menus[]" value="{{ $menu->id }}">
@@ -24,3 +23,23 @@
         </form>
     </x-app-layout>
 </div>
+<script>
+    function validateForm() {
+        // チェックされているかを確認する
+        const checkboxes = document.querySelectorAll('input[name="menus[]"]:checked');
+        // もしチェックボックスが1つもチェックされていなければ警告を表示
+        if (checkboxes.length === 0) {
+            window.alert('1つ以上チェックをつけてください。') // エラーメッセージを表示
+            return false; // フォーム送信を防ぐ
+        }
+        errorMessage.style.display = 'none'; // エラーメッセージを非表示
+        return true; // フォームを送信する
+    }
+</script>
+
+
+
+
+
+
+

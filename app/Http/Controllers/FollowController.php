@@ -20,5 +20,18 @@ class FollowController extends Controller
         })->orderBy('updated_at', 'desc')->get();
         // folders.indexビューにフォローしている人の記録を渡す
         return view('follows.index', compact('folders'));
+
+         /* テーブルから全てのレコードを取得する */
+           $query = User::query();
+
+        /* キーワードから検索処理 */
+        $user_name = $request->input('user_name');
+        if(!empty($user_name)) {//$user_name　が空ではない場合、検索処理を実行します
+            $query->where('user_name', 'LIKE', "%{$user_name}%");
+        }
+        
+        $follows = $query->get();
+
+        return view('index', compact('posts', 'user_name'));
     }
 }

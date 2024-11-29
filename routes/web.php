@@ -41,6 +41,8 @@ Route::get('/folder', [FolderController::class, 'index'])->name('folder.index');
 
 Route::get('/follow', [FollowController::class, 'index'])->name('follow.index');
 
+Route::get('/follow', [FollowController::class, 'index'])->name('follow.index');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
